@@ -21,9 +21,9 @@ func Newcmd() *CmdFlags {
 
 	flag.StringVar(&cf.Add, "add", "", "Add a todo with title")
 	
-	flag.IntVar(&cf.Del, "del", -1, "delete a todo")
+	flag.IntVar(&cf.Del, "del", -1, "delete a todo, specify id")
 	flag.StringVar(&cf.Edit, "edit","", "edit a todo with command 'id:new task'")
-	flag.IntVar(&cf.Toggle, "toggle", -1, "specify a todo to mark completed")
+	flag.IntVar(&cf.Toggle, "toggle", -1, "specify a todo with id to mark completed")
 	flag.BoolVar(&cf.List, "list", false, "list all todos")
 
 	flag.Parse()
