@@ -1,8 +1,13 @@
 package main
 
-import "fmt"
+func main() {
+	todo := Todos{}
 
+	storage := Newstorage[Todos]("todoslist.json")
+	storage.Load(&todo)
 
-func main(){
-  fmt.Println("h")
+	cmdf := Newcmd()
+	cmdf.Execute(&todo)
+
+	storage.Save(todo)
 }
